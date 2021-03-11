@@ -1,3 +1,9 @@
 from django.shortcuts import render
+from django.views import generic
 
-# Create your views here.
+from .models import Wish
+
+
+class WishListView(generic.ListView):
+    model = Wish
+    template_name = 'wish/landing_page.html'
