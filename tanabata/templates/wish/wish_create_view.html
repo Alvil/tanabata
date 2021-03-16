@@ -1,0 +1,23 @@
+{% extends 'wish/wish_base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+
+{% block body_block %}
+<form action="{% url 'wish:create-wish' %}" method="post">
+
+  {% csrf_token %}
+  <div class="card mx-auto" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title mx-auto">Make A Wish</h5>
+      {{ form.non_field_errors }}
+      {% for field in form %}
+      {% bootstrap_field field placeholder='' %}
+      {% endfor %}
+      <div class="d-grid d-md-block mx-auto col-4 mt-2">
+        <input type="submit" value="Wish!" class="btn btn-danger">
+      </div>
+    </div>
+  </div>
+</form>
+
+{% endblock %}
