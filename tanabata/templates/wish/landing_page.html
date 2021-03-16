@@ -1,0 +1,15 @@
+{% extends 'wish/wish_base.html' %}
+{% load static %}
+
+{% block body_block %}
+
+{% for wish in wish_list %}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{ wish.wish }}</h5>
+    <p class="card-text">Times wished: {{ wish.times_wished }}</p>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}
