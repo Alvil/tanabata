@@ -8,13 +8,11 @@ html {
 }
 
 body {
-	padding-top: 70px;
+	padding-top: 5em;
 	background-color: rgba(0, 0, 0, 0);
 }
 
-.piece-of-wish {
-	background-color: whitesmoke;
-	padding-right: 10px;
-	width: fit-content;
-	color: red;
+.card {
+	margin-top: 10px !important;
+	background-color: aqua;
 }
